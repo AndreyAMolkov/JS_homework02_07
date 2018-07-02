@@ -9,23 +9,7 @@ function Animal(name){
   Animal.prototype.getSize=function(){
     return this._size;
 }
-function Machine (power){
-   // console.log(arguments);
-    this._power = power*0.9;
-    this._enabled = false;
-    
 
-    this.enable = function(){
-        this._enabled = (this._power>100) ? true : false;
-        console.log('Output power is:', this._power)
-    }
-
-    this.disable = function(){
-        this._enabled = false;
-    }
-
-
-}
 function Rabbit(name) {
     Animal.apply(this,arguments)
    //  this.name = name;
@@ -64,6 +48,23 @@ Gorilla.prototype.constructor = Gorilla;
 var gorilla=new Gorilla('gorilla')
 gorilla.setSize(300);
 
+function Machine (power){
+    // console.log(arguments);
+     this._power = power*0.9;
+     this._enabled = false;
+     
+ 
+     this.enable = function(){
+         this._enabled = (this._power>100) ? true : false;
+         console.log('Output power is:', this._power)
+     }
+ 
+     this.disable = function(){
+         this._enabled = false;
+     }
+ 
+ 
+ }
 
 function Frige(power){
     Machine.apply(this.arguments)
